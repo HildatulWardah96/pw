@@ -155,13 +155,13 @@ if ($_SESSION['nama'] != "") {
                 <span class="text-secondary font-weight-bold"><?= $row["namaproduk"] ?></span>
               </td>  
               <td class="align-middle text-center">
-                <span class="text-secondary font-weight-bold"><?= $row["hargajual"] ?></span>
+                <span class="text-secondary font-weight-bold">Rp. <?= $row["hargajual"] ?></span>
               </td>   
               <td class="align-middle text-center">
                 <span class="text-secondary font-weight-bold"><?= $row["jumlah"] ?></span>
               </td>
               <td class="align-middle text-center">
-                <span class="text-secondary font-weight-bold"><?= $row["total"] ?></span>
+                <span class="text-secondary font-weight-bold">Rp. <?= $row["total"] ?></span>
               </td>
               <td class="align-middle text-center">
                 <span class="text-secondary font-weight-bold"><?php $date =  date_create($row["tanggal"]); echo date_format($date, "d-m-Y"); ?></span>
@@ -187,7 +187,7 @@ if ($_SESSION['nama'] != "") {
     <?php } ?> 
     <tr>
         <td><b>Total Pendapatan &nbsp; &emsp; &emsp; &emsp; &nbsp;</b></td>
-        <td><b><?php echo $hasil; ?></b></td>
+        <td><b>Rp. <?php echo $hasil; ?></b></td>
     </tr>
     </table>  
     <!-- end table -->
