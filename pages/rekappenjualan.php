@@ -8,14 +8,14 @@ if (isset($_POST["submit"])) {
   if (tambahDataPesanan($_POST) > 0) {
     echo "
     <script>
-            alert('data berhasil ditambahkan!');
+            alert('Data berhasil diadd!');
         document.location.href='datapesanan.php';
     </script> 
     ";
   } else {
     echo "
     <script>
-            alert('data gagal ditambahkan!');
+            alert('data gagal diadd!');
         document.location.href='datapesanan.php';
     </script>
     ";
