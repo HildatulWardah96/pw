@@ -112,11 +112,15 @@ function register($data)
 
 function cari($keyword)
 {
-  $query = "SELECT *FROM dataproduk
+  $query = "SELECT *FROM produk
     WHERE 
-    nama LIKE '%$keyword%' OR 
-    kode LIKE '%$keyword%' OR 
-    harga LIKE '%$keyword%'
+    namaproduk LIKE '%$keyword%' OR 
+    deskripsi LIKE '%$keyword%' OR 
+    harga LIKE '%$keyword%' OR
+    stok LIKE '%$keyword%' OR
+    jumlah LIKE '%$keyword%' OR
+    tanggal LIKE '%$keyword%' OR
+    idproduk LIKE '%$keyword%' OR
     ";
 
   return query($query);
@@ -185,7 +189,7 @@ function updatePesanan($data)
 function hapusPesanan($id)
 {
   global $conn;
-  mysqli_query($conn, "DELETE FROM pesanan WHERE idproduk = $id");
+  mysqli_query($conn, "DELETE FROM pesanan WHERE id = $id");
   return mysqli_affected_rows($conn);
 }
 

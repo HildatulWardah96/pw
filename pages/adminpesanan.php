@@ -4,8 +4,8 @@
       <thead>
         <tr>
         <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">NO</th>
-        <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">ID Produk</th>
         <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Nama</th>
+        <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">ID Produk</th>
           <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Harga Jual</th>
           <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Jumlah Order</th>
           <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Total</th>
@@ -23,11 +23,11 @@
               </div>
             </td>
               <td class="align-middle text-center">
-                <span class="text-secondary font-weight-bold"><?= $row["idproduk"] ?></span>
-              </td>
-              <td class="align-middle text-center">
                 <span class="text-secondary font-weight-bold"><?= $row["namaproduk"] ?></span>
               </td> 
+              <td class="align-middle text-center">
+                <span class="text-secondary font-weight-bold"><?= $row["idproduk"] ?></span>
+              </td>
               <td class="align-middle text-center">
                 <span class="text-secondary font-weight-bold">Rp. <?= $row["hargajual"] ?></span>
               </td>
@@ -42,7 +42,7 @@
               </td>
               <td class="align-middle text-center">
                 <a href="../action/ubahpesanan.php?id=<?= $row["idproduk"] ?>" class="btn btn-success btn-sm">Ubah</a>
-                <a href="../action/hapuspesanan.php?id=<?= $row["idproduk"] ?>" class="btn btn-danger btn-sm" onclick="return confirm ('Anda yakin ingin menghapus data?');">Hapus</a>
+                <a href="../action/hapuspesanan.php?id=<?= $row["id"] ?>" class="btn btn-danger btn-sm" onclick="return confirm ('Anda yakin ingin menghapus data?');">Hapus</a>
 
               </td>
               </tr>

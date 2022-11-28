@@ -21,13 +21,16 @@ if (isset($_POST["submit"])) {
     ";
   }
 }
-
+if(isset($_POST['cari'])){
+  $dataproduk = cari($_POST['keyword']);
+}
 if ($_SESSION['nama'] != "") {
   $username = $_SESSION['username'];
   $level = $_SESSION['level'];
 } else {
   header("location: login.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

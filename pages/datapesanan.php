@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../functions/functions.php';
-$dataproduk = query("SELECT pesanan.idproduk, produk.namaproduk, pesanan.tanggal, pesanan.hargajual, pesanan.jumlah, pesanan.total FROM produk INNER JOIN pesanan ON produk.id=pesanan.idproduk");
+$dataproduk = query("SELECT pesanan.idproduk, produk.namaproduk, pesanan.tanggal, pesanan.hargajual, pesanan.jumlah, pesanan.total, produk.id FROM produk INNER JOIN pesanan ON produk.id=pesanan.idproduk");
 if (isset($_POST["Submit"])) {
   $idproduk = $_POST['idproduk'];
   $jumlah = $_POST['jumlah'];
@@ -29,7 +29,7 @@ if (isset($_POST["Submit"])) {
                 $upstok=mysqli_query($conn, "UPDATE produk SET stok='$sisa' WHERE id='$idproduk'");
                 ?>
                     <script language="JavaScript">
-                    alert('Good! Input transaksi pengeluaran barang berhasil ...');
+                    alert('Bagus! Input pengeluaran transaksi barang berhasil ...');
                     document.location='datapesanan.php';
                 </script>
                 <?php
@@ -52,7 +52,11 @@ if (isset($_POST["Submit"])) {
     </script>
     ";
   }
+
+ 
+  
 }
+
 
 if ($_SESSION['nama'] != "") {
   $username = $_SESSION['username'];
@@ -60,6 +64,7 @@ if ($_SESSION['nama'] != "") {
 } else {
   header("location: login.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
