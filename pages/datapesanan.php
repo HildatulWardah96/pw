@@ -18,7 +18,7 @@ if (isset($_POST["Submit"])) {
         ?>
         <script language="JavaScript">
             alert('Oops! Jumlah pengeluaran lebih besar dari stok ...');
-            document.location='stok.php';
+            document.location='datapesanan.php';
         </script>
         <?php
     }
@@ -30,7 +30,7 @@ if (isset($_POST["Submit"])) {
                 ?>
                     <script language="JavaScript">
                     alert('Good! Input transaksi pengeluaran barang berhasil ...');
-                    document.location='stok.php';
+                    document.location='datapesanan.php';
                 </script>
                 <?php
             }

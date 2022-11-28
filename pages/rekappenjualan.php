@@ -181,8 +181,8 @@ if ($_SESSION['nama'] != "") {
     <?php
     $data = mysqli_query($conn, "SELECT *FROM pesanan");
     $hasil = 0;
-    while($tampil = mysqli_fetch_array($data)){
-        $hasil += $tampil["total"];
+    while($hsl = mysqli_fetch_array($data)){
+        $hasil += $hsl["total"];
     ?>
     <?php } ?> 
     <tr>
