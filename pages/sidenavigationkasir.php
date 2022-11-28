@@ -29,20 +29,21 @@
     <li class="nav-item mt-3">
       <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">KASIR</h6>
     </li> -->
-    <li class="nav-item">
-      <a class="nav-link" href="datapesanan.php">
-        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-          <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
-        </div>
-        <span class="nav-link-text ms-1">Input Penjualan</span>
-      </a>
-    </li>
+    
     <li class="nav-item">
       <a class="nav-link" href="stok.php">
         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-          <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
+          <img src="https://cdn-icons-png.flaticon.com/512/679/679922.png" alt="" width=20>
         </div>
         <span class="nav-link-text ms-1">Input Produk</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="datapesanan.php">
+        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/3759/3759041.png" alt="" width=20>
+        </div>
+        <span class="nav-link-text ms-1">Input Penjualan</span>
       </a>
     </li>
     <li class="nav-item mt-3">
@@ -51,7 +52,7 @@
     <li class="nav-item">
       <a class="nav-link" href="rekappenjualan.php">
         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-          <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
+        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="" width=20>
         </div>
         <span class="nav-link-text ms-1">Rekap Penjualan</span>
       </a>
@@ -59,7 +60,7 @@
     <li class="nav-item">
       <a class="nav-link" href="rekapbarang.php">
         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-          <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
+        <img src="https://cdn-icons-png.flaticon.com/512/5832/5832416.png" alt="" width=20>
         </div>
         <span class="nav-link-text ms-1">Rekap Barang</span>
       </a>

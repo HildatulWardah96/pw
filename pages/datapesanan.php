@@ -2,8 +2,40 @@
 session_start();
 include '../functions/functions.php';
 $dataproduk = query("SELECT pesanan.idproduk, produk.namaproduk, pesanan.tanggal, pesanan.hargajual, pesanan.jumlah, pesanan.total FROM produk INNER JOIN pesanan ON produk.id=pesanan.idproduk");
-if (isset($_POST["submit"])) {
+if (isset($_POST["Submit"])) {
+  $idproduk = $_POST['idproduk'];
+  $jumlah = $_POST['jumlah'];
+  $harga = $_POST['hargajual'];
+  $total = $jumlah*$harga;
 
+        $data = mysqli_query($conn, "SELECT *FROM produk where id='$idproduk'");
+        $sto = mysqli_fetch_array($data);
+        $stok= $sto['stok'];
+
+        //menghitung sisa stok
+    $sisa = $stok - $jumlah;
+    if($stok < $jumlah){
+        ?>
+        <script language="JavaScript">
+            alert('Oops! Jumlah pengeluaran lebih besar dari stok ...');
+            document.location='datapesanan.php';
+        </script>
+        <?php
+    }
+        else {
+            $insert = mysqli_query($conn, "INSERT INTO pesanan (idproduk, jumlah, hargajual, total) VALUES ('$idproduk', '$jumlah', '$harga', '$total')");
+            if($insert){
+                //update stok
+                $upstok=mysqli_query($conn, "UPDATE produk SET stok='$sisa' WHERE id='$idproduk'");
+                ?>
+                    <script language="JavaScript">
+                    alert('Good! Input transaksi pengeluaran barang berhasil ...');
+                    document.location='datapesanan.php';
+                </script>
+                <?php
+            }
+        }
+  
   //Cek apakah data berhasil ditambahkan atau tidak
   if (tambahDataPesanan($_POST) > 0) {
     echo "
@@ -217,7 +249,7 @@ if ($_SESSION['nama'] != "") {
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success" data-bs-dismiss="modal" name="submit">Input</button>
+          <button type="submit" class="btn btn-success" data-bs-dismiss="modal" name="Submit" value="Submit">Input</button>
           <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div>
       </form>
