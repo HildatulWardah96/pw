@@ -52,7 +52,6 @@ function updateData($data)
   global $conn;
   // ambil data dari masing masing elemen dalam form
   $id = $data["id"];
-
   $namaproduk = htmlspecialchars($data["namaproduk"]);
   $deskripsi = htmlspecialchars($data["deskripsi"]);
   $harga = htmlspecialchars($data["harga"]);
@@ -164,11 +163,11 @@ function updatePesanan($data)
 {
   global $conn;
   // ambil data dari masing masing elemen dalam form
-  $id = $data["idproduk"];
-
+  $id = $data["id"];
   $harga = htmlspecialchars($data["hargajual"]);
   $idproduk = htmlspecialchars($data["idproduk"]);
   $jumlah = ($data["jumlah"]);
+  $tanggal = date('Y-m-d');
   $total = $jumlah*$harga;
 
   //query insert data
@@ -177,7 +176,7 @@ function updatePesanan($data)
             idproduk = '$idproduk',
             jumlah = '$jumlah',
             total = '$total'
-            WHERE idproduk = $id 
+            WHERE id = $id
     ";
   mysqli_query($conn, $query);
 
@@ -186,7 +185,7 @@ function updatePesanan($data)
 function hapusPesanan($id)
 {
   global $conn;
-  mysqli_query($conn, "DELETE FROM pesanan WHERE id = $id");
+  mysqli_query($conn, "DELETE FROM pesanan WHERE idproduk = $id");
   return mysqli_affected_rows($conn);
 }
 

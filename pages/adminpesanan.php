@@ -13,9 +13,10 @@
         </tr>
       </thead>
       <tbody>
-       
+      
         <?php foreach ($dataproduk as $row) :  ?>
           <tr>
+          
               <td class="align-middle text-center">
                 <span class="text-secondary font-weight-bold"><?= $row["idproduk"] ?></span>
               </td>

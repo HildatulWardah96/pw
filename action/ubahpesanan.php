@@ -1,10 +1,10 @@
 <?php
 session_start(); 
 include "../functions/functions.php";
-$idproduk = $_GET["id"];
+$id = $_GET["id"];
 
 //query data mahasiswa berdasarkan id
-$dataproduk = query("SELECT *FROM pesanan WHERE idproduk =$idproduk")[0];
+$dataproduk = query("SELECT *FROM pesanan WHERE idproduk =$id")[0];
 //Cek apakah tombol submit sudah diklik 
 if ( isset($_POST["submit"])) {
      
@@ -88,16 +88,13 @@ if ( isset($_POST["submit"])) {
 
               <div class="card-body">
                 <form role="form" method="POST" action="">
-                    <div class="mb-3">
-                      <input type="hidden" name="idproduk" class="form-control" value="<?= $dataproduk["idproduk"]; ?>" aria-label="id"/>
-                    </div>
-                    <div class="mb-3">
-                      <input type="text" autocomplete="off" name="hargajual" class="form-control" aria-label="kode" placeholder="Harga Jual" value="<?= $dataproduk["hargajual"]; ?>"/>
+                <div class="mb-3">
+                      <input type="hidden" name="id" class="form-control" value="<?= $dataproduk["id"]; ?>" aria-label="id"/>
                     </div>
                   <div class="mb-3">
                   <?php
                     $no=0;
-                    $hasil=mysqli_query($conn, "SELECT *FROM produk");
+                    $hasil=mysqli_query($conn, "SELECT *FROM produk ORDER BY namaproduk");
                     echo '<select name="idproduk" class="form-control mt-2" required>';
                     echo '<option value="">Pilih Produk</option>';
                     while($rowbar=mysqli_fetch_array($hasil)){
@@ -106,8 +103,12 @@ if ( isset($_POST["submit"])) {
                     echo '</select>';
                     ?>
                   </div>
+                    
+                    <div class="mb-3">
+                      <input type="text" autocomplete="off" name="hargajual" class="form-control" placeholder="Harga Jual" value="<?= $dataproduk["hargajual"]; ?>"/>
+                    </div>
                   <div class="mb-3">
-                      <input type="text" autocomplete="off" name="jumlah" class="form-control" aria-label="kode" placeholder="Nama Produk" value="<?= $dataproduk["jumlah"]; ?>"/>
+                      <input type="text" autocomplete="off" name="jumlah" class="form-control" aria-label="jumlah" placeholder="jumlah" value="<?= $dataproduk["jumlah"]; ?>"/>
                     </div>
                   <div class="text-center">
                     <button type="submit" name="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Update Pesanan</button>

@@ -3,7 +3,7 @@ session_start();
 include '../functions/functions.php';
 $dataproduk = query("SELECT pesanan.idproduk, produk.namaproduk, pesanan.tanggal, pesanan.hargajual, pesanan.jumlah, pesanan.total FROM produk INNER JOIN pesanan ON produk.id=pesanan.idproduk");
 if (isset($_POST["submit"])) {
-
+  
   //Cek apakah data berhasil ditambahkan atau tidak
   if (tambahDataPesanan($_POST) > 0) {
     echo "
