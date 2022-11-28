@@ -38,7 +38,7 @@
                 <span class="text-secondary font-weight-bold">Rp. <?= $row["total"] ?></span>
               </td>
               <td class="align-middle text-center">
-                <span class="text-secondary font-weight-bold"><?= $row["tanggal"] ?></span>
+                <span class="text-secondary font-weight-bold"><?php $date =  date_create($row["tanggal"]); echo date_format($date, "d-m-Y"); ?></span>
               </td>
               <td class="align-middle text-center">
                 <a href="../action/ubahpesanan.php?id=<?= $row["idproduk"] ?>" class="btn btn-success btn-sm">Ubah</a>
