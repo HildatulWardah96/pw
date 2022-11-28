@@ -7,6 +7,10 @@ if (!isset($_SESSION["nama"])) {
   exit;
 }
 
+if ($_SESSION['level'] != 'admin') {
+  header("Location: datapesanan.php");
+}
+
 if ($_SESSION['nama'] != "") {
   $username = $_SESSION['username'];
   $level = $_SESSION['level'];
