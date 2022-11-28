@@ -28,7 +28,7 @@
                 <p class="align-middle text-center "><?= $row["deskripsi"] ?></p>
               </td>
               <td class="align-middle text-center">
-                <span class="text-secondary font-weight-bold"><?= $row["harga"] ?></span>
+                <span class="text-secondary font-weight-bold">Rp.<?= $row ["harga"] ?></span>
               </td>
               <td class="align-middle text-center">
                 <span class="text-secondary font-weight-bold"><?= $row["stok"] ?></span>

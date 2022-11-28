@@ -38,11 +38,11 @@
                 <span class="text-secondary font-weight-bold">Rp. <?= $row["total"] ?></span>
               </td>
               <td class="align-middle text-center">
-                <span class="text-secondary font-weight-bold"><?php $date =  date_create($row["tanggal"]); echo date_format($date, "d-m-Y"); ?></span>
+                <span class="text-secondary font-weight-bold"><?= $row["tanggal"] ?></span>
               </td>
               <td class="align-middle text-center">
                 <a href="../action/ubahpesanan.php?id=<?= $row["idproduk"] ?>" class="btn btn-success btn-sm">Ubah</a>
-                <a href="../action/hapuspesanan.php?id=<?= $row["id"] ?>" class="btn btn-danger btn-sm" onclick="return confirm ('Anda yakin ingin menghapus data?');">Hapus</a>
+                <a href="../action/hapuspesanan.php?id=<?= $row["idproduk"] ?>" class="btn btn-danger btn-sm" onclick="return confirm ('Anda yakin ingin menghapus data?');">Hapus</a>
 
               </td>
               </tr>

@@ -4,8 +4,8 @@
       <thead>
         <tr>
           <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">NO</th>
-          <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">ID Produk</th>
           <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Nama</th>
+          <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">ID Produk</th>
           <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Harga Jual</th>
           <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Jumlah Order</th>
           <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Total</th>
@@ -22,11 +22,12 @@
               </div>
             </td>
             <td class="align-middle text-center">
-              <span class="text-secondary font-weight-bold"><?= $row["idproduk"] ?></span>
-            </td>
-            <td class="align-middle text-center">
               <span class="text-secondary font-weight-bold"><?= $row["namaproduk"] ?></span>
             </td>
+            <td class="align-middle text-center">
+              <span class="text-secondary font-weight-bold"><?= $row["idproduk"] ?></span>
+            </td>
+            
             <td class="align-middle text-center">
               <span class="text-secondary font-weight-bold">Rp. <?= $row["hargajual"] ?></span>
             </td>
@@ -38,7 +39,7 @@
             </td>
             <td class="align-middle text-center">
               <span class="text-secondary font-weight-bold"><?php $date =  date_create($row["tanggal"]);
-                                                            echo date_format($date, "d-m-Y"); ?></span>
+                                                            echo date_format($date, "Y-m-d"); ?></span>
             </td>
           </tr>
       </tbody>

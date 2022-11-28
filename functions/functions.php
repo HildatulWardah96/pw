@@ -189,7 +189,7 @@ function updatePesanan($data)
 function hapusPesanan($id)
 {
   global $conn;
-  mysqli_query($conn, "DELETE FROM pesanan WHERE id = $id");
+  mysqli_query($conn, "DELETE FROM pesanan WHERE idproduk = $id");
   return mysqli_affected_rows($conn);
 }
 
@@ -230,4 +230,7 @@ FROM datapenjualan WHERE tanggal >= '$first_year' AND tanggal < '$last_year'
 
 
   return $data;
+}
+function rupiah($angka){
+  $format_rupiah = "Rp " . number_format($angka,2,',','.');
 }
