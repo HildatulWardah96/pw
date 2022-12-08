@@ -21,8 +21,8 @@ if (isset($_POST["submit"])) {
     ";
   }
 }
-if(isset($_POST['cari'])){
-  $dataproduk = cari($_POST['keyword']);
+if(isset($_POST["cari"])){
+  $dataproduk = cari($_POST["keyword"]);
 }
 if ($_SESSION['nama'] != "") {
   $username = $_SESSION['username'];

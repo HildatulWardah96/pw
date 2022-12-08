@@ -118,9 +118,7 @@ function cari($keyword)
     deskripsi LIKE '%$keyword%' OR 
     harga LIKE '%$keyword%' OR
     stok LIKE '%$keyword%' OR
-    jumlah LIKE '%$keyword%' OR
-    tanggal LIKE '%$keyword%' OR
-    idproduk LIKE '%$keyword%' OR
+    tanggal LIKE '%$keyword%'
     ";
 
   return query($query);
