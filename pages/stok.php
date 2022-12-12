@@ -130,6 +130,11 @@ if ($_SESSION['nama'] != "") {
     <!-- End Navbar -->
     <div class="container-fluid py-4">
       <div class="row">
+        <div class="p-3">
+        <button type="submit" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#myModal">
+          Input Barang Baru
+        </button>
+        </div>
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
@@ -149,9 +154,7 @@ if ($_SESSION['nama'] != "") {
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-      Input Barang Baru
-    </button>
+   
 
 
     <footer class="footer pt-3  ">

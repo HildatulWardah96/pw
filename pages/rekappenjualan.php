@@ -81,7 +81,7 @@ if ($_SESSION['nama'] != "") {
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="">Halaman</a></li>
             <li class="breadcrumb-item text-sm text-white active" aria-current="page">Stok</li>
           </ol>
-          <h6 class="font-weight-bolder text-white mb-0">Data Pesanan</h6>
+          <h6 class="font-weight-bolder text-white mb-0">Data Penjualan</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -130,7 +130,7 @@ if ($_SESSION['nama'] != "") {
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>Data Produk</h6>
+              <h6>Rekap Penjualan</h6>
             </div>
             <div class="card-body  pt-0 pb-2">
   <div class="table-responsive p-0">
