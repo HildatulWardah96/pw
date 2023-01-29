@@ -18,21 +18,21 @@ if ($_SESSION['nama'] != "") {
   header("location: login.php");
 }
 
-$penjualan = query("SELECT * FROM `penjualan`");
+// $penjualan = query("SELECT * FROM `penjualan`");
 
-$hasilpenjualan = "";
-$bulan = "";
-foreach ($penjualan as $data) {
-  $dataBulan = $data['bulan'];
-  $dataHasilPenjualan = $data['hasilpenjualan'];
+// $hasilpenjualan = "";
+// $bulan = "";
+// foreach ($penjualan as $data) {
+//   $dataBulan = $data['bulan'];
+//   $dataHasilPenjualan = $data['hasilpenjualan'];
 
-  $hasilpenjualan .= " '$dataHasilPenjualan',";
-  $bulan .= " '$dataBulan',";
-}
+//   $hasilpenjualan .= " '$dataHasilPenjualan',";
+//   $bulan .= " '$dataBulan',";
+// }
 
-$data_hari_ini = get_data_hari_ini();
-$data_bulan_ini = get_bulan_hari_ini();
-$data_tahun_ini = get_tahun_hari_ini();
+// $data_hari_ini = get_data_hari_ini();
+// $data_bulan_ini = get_bulan_hari_ini();
+// $data_tahun_ini = get_tahun_hari_ini();
 
 ?>
 <!DOCTYPE html>
